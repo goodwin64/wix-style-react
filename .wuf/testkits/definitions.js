@@ -447,7 +447,6 @@ module.exports = {
     vanillaLegacyTestkit: true,
     enzymeLegacyTestkit: true,
     protractorLegacyTestkit: true,
-    noPuppeteerTestkit: true,
   },
 
   Label: {
