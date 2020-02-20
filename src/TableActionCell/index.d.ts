@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { IconElement } from '../common';
-import { PopoverMenuProps as PopoverMenuPropsNew } from '../../beta/PopoverMenu';
+import { PopoverMenuNextProps as PopoverMenuPropsNew } from '../../beta/PopoverMenu';
 import { PopoverMenuProps as PopoverMenuPropsOld } from '../PopoverMenu';
 import {OmitPolyfill} from '../common';
 

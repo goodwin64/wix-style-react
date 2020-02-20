@@ -1,5 +1,5 @@
 import { BaseUniDriver } from 'wix-ui-test-utils/base-driver';
-import { MessageBoxFunctionalLayoutTheme } from './index';
+import { MessageBoxFunctionalLayoutTheme } from './MessageBoxFunctionalLayout';
 import { UniDriver } from 'wix-ui-test-utils/unidriver';
 
 export interface MessageBoxFunctionalLayoutUniDriver extends BaseUniDriver {

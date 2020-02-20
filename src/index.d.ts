@@ -25,7 +25,7 @@ export { BadgeProps, BadgeSize, BadgeSkin, BadgeType } from './Badge'
 export { default as BadgeSelect } from './BadgeSelect'
 export * from './BadgeSelect'
 
-export { default as BadgeSelectItemBuilder } from './BadgeSelectItemBuilder'
+export { badgeSelectItemBuilder } from './BadgeSelectItemBuilder'
 export * from './BadgeSelectItemBuilder'
 
 export { default as BarChart } from './BarChart'

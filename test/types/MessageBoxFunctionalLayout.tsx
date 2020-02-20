@@ -1,14 +1,10 @@
-import * as React from "react";
-import {
-  HeaderLayout,
-  FooterLayout
-} from "../../src/MessageBox";
-import MessageBoxFunctionalLayout from "../../src/MessageBox/FunctionalLayout";
-import { messageBoxFunctionalLayoutTestkitFactory } from "../../dist/testkit";
-import { messageBoxFunctionalLayoutTestkitFactory as messageBoxFunctionalLayoutEnzymeTestkitFactory } from "../../dist/testkit/enzyme";
-import { messageBoxFunctionalLayoutTestkitFactory as messageBoxFunctionalLayoutPuppeteerTestkitFactory } from "../../dist/testkit/puppeteer";
-import * as enzyme from "enzyme";
-import * as puppeteer from "puppeteer";
+import * as enzyme from 'enzyme';
+import * as puppeteer from 'puppeteer';
+import * as React from 'react';
+import {messageBoxFunctionalLayoutTestkitFactory} from '../../dist/testkit';
+import {messageBoxFunctionalLayoutTestkitFactory as messageBoxFunctionalLayoutEnzymeTestkitFactory} from '../../dist/testkit/enzyme';
+import {messageBoxFunctionalLayoutTestkitFactory as messageBoxFunctionalLayoutPuppeteerTestkitFactory} from '../../dist/testkit/puppeteer';
+import {FooterLayout, HeaderLayout, MessageBoxFunctionalLayout} from '../../src/MessageBox';
 
 function MessageBoxFunctionalLayoutWithMandatoryProps() {
   return <MessageBoxFunctionalLayout />;
@@ -90,21 +86,21 @@ function FooterLayoutWithAllProps() {
 
 async function testkits() {
   const testkit = messageBoxFunctionalLayoutTestkitFactory({
-    dataHook: "hook",
-    wrapper: document.createElement("div")
+    dataHook: 'hook',
+    wrapper: document.createElement('div'),
   });
 
   const enzymeTestkit = messageBoxFunctionalLayoutEnzymeTestkitFactory({
-    dataHook: "hook",
-    wrapper: enzyme.mount(<div />)
+    dataHook: 'hook',
+    wrapper: enzyme.mount(<div />),
   });
 
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   const puppeteerTestkit = await messageBoxFunctionalLayoutPuppeteerTestkitFactory(
     {
-      dataHook: "hook",
-      page
-    }
+      dataHook: 'hook',
+      page,
+    },
   );
 }

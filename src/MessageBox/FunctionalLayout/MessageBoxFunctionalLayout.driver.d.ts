@@ -1,5 +1,5 @@
 import { BaseDriver } from 'wix-ui-test-utils/driver-factory';
-import { MessageBoxFunctionalLayoutTheme } from './index';
+import { MessageBoxFunctionalLayoutTheme } from './MessageBoxFunctionalLayout';
 
 export interface MessageBoxFunctionalLayoutDriver<T> extends BaseDriver {
   element: () => T;
