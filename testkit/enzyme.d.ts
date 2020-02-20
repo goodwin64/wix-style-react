@@ -112,7 +112,6 @@ declare namespace EnzymeTestkit {
   export const sliderTestkitFactory: any;
   export const socialPreviewTestkitFactory: any;
   export const sortableListTestkitFactory: any;
-  export const statsWidgetTestkitFactory: any;
   export const stepperTestkitFactory: any;
   export const swatchesTestkitFactory: any;
   export const tableTestkitFactory: any;
@@ -159,9 +158,7 @@ declare namespace EnzymeTestkit {
   export const fontUpgradeTestkitFactory: any;
   export const customModalTestkitFactory: EnzymeUniTestkitFactory<CustomModalDriver>;
   export const statusIndicatorTestkitFactory: any;
-  export const sideMenuDrillTestkitFactory: any;
   export const headerTestkitFactory: any;
-  export const sideMenuTestkitFactory: any;
   export const draggableTestkitFactory: any;
   export const editableRowTestkitFactory: any;
   export const fieldLabelAttributesTestkitFactory: any;
