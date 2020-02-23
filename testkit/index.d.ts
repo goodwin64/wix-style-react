@@ -19,6 +19,7 @@ import {SocialButtonDriver} from '../src/SocialButton/SocialButton.uni.driver'
 import {ListItemSectionDriver} from '../src/ListItemSection/ListItemSection.uni.driver';
 import {ListItemSelectDriver} from '../src/ListItemSelect/ListItemSelect.uni.driver';
 import {SidePanelDriver} from '../src/SidePanel/SidePanel.uni.driver';
+import {PopoverMenuDriver} from '../src/PopoverMenu/PopoverMenu.uni.driver';
 
 declare namespace VanillaTestkit {
   type VanillaTestkitFactory<T extends BaseDriver> = (
@@ -154,6 +155,7 @@ declare namespace VanillaTestkit {
   export const fontUpgradeTestkitFactory: any;
   export const customModalTestkitFactory: VanillaUniTestkitFactory<CustomModalDriver>;
   export const statusIndicatorTestkitFactory: any;
+  export const popoverMenuTestkitFactory: VanillaUniTestkitFactory<PopoverMenuDriver>;
   export const headerTestkitFactory: any;
   export const draggableTestkitFactory: any;
   export const editableRowTestkitFactory: any;

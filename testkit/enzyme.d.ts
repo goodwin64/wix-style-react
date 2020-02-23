@@ -23,6 +23,7 @@ import {ImageDriver} from '../src/Image/Image.uni.driver';
 import {ListItemSectionDriver} from '../src/ListItemSection/ListItemSection.uni.driver';
 import {ListItemSelectDriver} from '../src/ListItemSelect/ListItemSelect.uni.driver';
 import {SidePanelDriver} from '../src/SidePanel/SidePanel.uni.driver';
+import {PopoverMenuDriver} from '../src/PopoverMenu/PopoverMenu.uni.driver';
 
 declare namespace EnzymeTestkit {
   type EnzymeTestkitFactory<T extends BaseDriver> = (
@@ -158,6 +159,7 @@ declare namespace EnzymeTestkit {
   export const fontUpgradeTestkitFactory: any;
   export const customModalTestkitFactory: EnzymeUniTestkitFactory<CustomModalDriver>;
   export const statusIndicatorTestkitFactory: any;
+  export const popoverMenuTestkitFactory: EnzymeUniTestkitFactory<PopoverMenuDriver>;
   export const headerTestkitFactory: any;
   export const draggableTestkitFactory: any;
   export const editableRowTestkitFactory: any;

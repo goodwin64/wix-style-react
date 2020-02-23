@@ -1,5 +1,5 @@
 import * as React from 'react';
-export { default as PopoverMenuNext, PopoverMenuProps as PopoverMenuNextProps } from './beta/PopoverMenu';
+export { default as PopoverMenu, PopoverMenuProps } from './PopoverMenu';
 export { IconElement, InjectedFocusableProps, Omit } from './common';
 export const AddItem: any;
 export { default as Avatar, AvatarProps } from './Avatar';

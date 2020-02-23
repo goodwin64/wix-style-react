@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import PopoverMenu from '../../src/beta/PopoverMenu';
+import PopoverMenu from '../../src/PopoverMenu';
 
-import { PopoverMenuTestkit } from '../../testkit/beta';
-import { PopoverMenuTestkit as PopoverMenuEnzymeTestkit } from '../../testkit/beta/enzyme';
+import { popoverMenuTestkitFactory } from '../../testkit';
+import { popoverMenuTestkitFactory as popoverMenuEnzymeTestkitFactory } from '../../testkit/enzyme';
 
 async function testkits() {
-  const vanilla = PopoverMenuTestkit({
+  const vanilla = popoverMenuTestkitFactory({
     dataHook: 'hi',
     wrapper: document.createElement('div'),
   });
@@ -14,7 +14,7 @@ async function testkits() {
   await vanilla.exists();
   await vanilla.isMenuOpen();
 
-  const enzyme = PopoverMenuEnzymeTestkit({
+  const enzyme = popoverMenuEnzymeTestkitFactory({
     dataHook: 'shbem',
     wrapper: mount(<div />),
   });
