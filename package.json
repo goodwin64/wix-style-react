@@ -59,7 +59,6 @@
     "postbuild": "npm run copy-public-styles && npm run export-components",
     "update-components": ".wuf/update-components.sh",
     "update-components:beta": ".wuf/update-components-beta.sh",
-    "lint": "yoshi lint --fix",
     "copy-public-styles": "cp src/*.scss .",
     "bundle": "webpack --config ./node_modules/yoshi/config/webpack.config.client.js --debug --display-error-details --progress",
     "transpile": "node ./scripts/transpile.js",
