@@ -19,7 +19,7 @@ class ModalExample extends React.Component {
     return (
       <Box>
         <Button onClick={this.openModal}>Open Modal</Button>
-        <Modal isOpen={isModalOpened} onRequestClose={this.closeModal}>
+        <Modal isOpen={isModalOpened} onRequestClose={this.closeModal} shouldCloseOnOverlayClick >
           <CustomModal
             primaryButtonText="Save"
             primaryButtonOnClick={this.closeModal}

@@ -4,7 +4,7 @@ import * as React from 'react';
 export interface CustomModalProps {
   className?: string,
   dataHook?: string,
-  title?: string,
+  title?: React.ReactNode,
   subtitle?: string,
   primaryButtonText?: string,
   //TODO - refactor when wsr-types is merged to this project

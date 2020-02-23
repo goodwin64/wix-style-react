@@ -53,6 +53,16 @@ describe('CustomModal', () => {
     expect(await driver.getTitleText()).toEqual(title);
   });
 
+  it('should render title node', async () => {
+    const titleText = 'Modal Title';
+    const titleNode = <div data-hook="customModal-title">{titleText}</div>;
+    const { driver } = render(
+      <CustomModal title={titleNode}>Content</CustomModal>,
+    );
+
+    expect(await driver.getTitleText()).toEqual(titleText);
+  });
+
   it('should render subtitle', async () => {
     const subtitle = 'Subtitle here';
     const title = 'Modal Title';

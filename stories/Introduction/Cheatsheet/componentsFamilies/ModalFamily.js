@@ -201,16 +201,6 @@ class ContentModalExample extends PureComponent {
 }
 
 class CustomModalExample extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isOpen: false,
-    };
-  }
-
-  openModal = () => this.setState({ isOpen: true });
-  closeModal = () => this.setState({ isOpen: false });
-
   render() {
     const symbol = modalsSymbols.custom;
     const components = modalsSymbolsToComponents[symbol];
@@ -222,24 +212,37 @@ class CustomModalExample extends PureComponent {
 
     return (
       <SingleComponentSideBySide {...singleComponentProps}>
-        <Button onClick={this.openModal}>Open Modal</Button>
-        <Modal isOpen={this.state.isOpen} onRequestClose={this.closeModal}>
+        <Box>
           <CustomModal
             primaryButtonText="Save"
-            primaryButtonOnClick={this.closeModal}
             secondaryButtonText="Cancel"
-            secondaryButtonOnClick={this.closeModal}
-            onCloseButtonClick={this.closeModal}
-            title="Create New Coupon"
-            subtitle="Make customers come back to your store with coupons"
-            sideActions={<Checkbox>Checkbox</Checkbox>}
+            title="New Product"
+            subtitle="To get running, your new product needs some details:"
+            sideActions={<Checkbox>Don't show this again</Checkbox>}
           >
-            <Text>
-              If you leave now, changes you have made here won't be saved. Are
-              you sure you want to leave?
-            </Text>
+            <Container fluid>
+              <Row stretchViewsVertically>
+                <Col span={9}>
+                  <FormField label="Title">
+                    <Input size="normal" placeholder="Value" />
+                  </FormField>
+                </Col>
+                <Col span={3}>
+                  <FormField label="Quantity">
+                    <NumberInput value={500} />
+                  </FormField>
+                </Col>
+              </Row>
+              <Row stretchViewsVertically>
+                <Col>
+                  <FormField label="Description">
+                    <RichTextInputArea placeholder="Tell your customers what they will get" />
+                  </FormField>
+                </Col>
+              </Row>
+            </Container>
           </CustomModal>
-        </Modal>
+        </Box>
       </SingleComponentSideBySide>
     );
   }
@@ -455,9 +458,7 @@ const ModalMobileLayoutExample = () => {
 const ModalFamily = () => (
   <FamilyStructure title={groupSymbol} showPreview>
     <AlertExamples />
-    <ContentModalExample />
     <CustomModalExample />
-    <MarketingExample />
     <ModalPreviewLayoutExample />
     <ModalMobileLayoutExample />
   </FamilyStructure>

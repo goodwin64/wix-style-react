@@ -13,6 +13,12 @@
   -st-named: radius08;
 }
 
+:import {
+  -st-from: "../Foundation/stylable/shadows.st.css";
+  -st-named: shadow40;
+}
+
+
 .root {
   -st-states: removeContentPadding;
   background-color: value(D80);
@@ -23,6 +29,8 @@
   display: flex;
   flex-direction: column;
   border-radius: value(radius08);
+  box-shadow: value(shadow40);
+  overflow: hidden;
 }
 
 
@@ -36,7 +44,6 @@
   overflow-y: auto;
   -st-mixin: defaultScrollBar;
   padding: 0 value(modalPadding);
-  border-radius: value(radius08);
 }
 
 

@@ -19,7 +19,7 @@ class MarketingExample extends React.Component {
     return (
       <>
         <Button onClick={this.openModal}>Open Modal</Button>
-        <Modal isOpen={isModalOpened} onRequestClose={this.closeModal}>
+        <Modal isOpen={isModalOpened} onRequestClose={this.closeModal} shouldCloseOnOverlayClick >
           <CustomModal removeContentPadding onCloseButtonClick={this.closeModal}>
             <Card>
               <Box width="800px" verticalAlign="middle" >
@@ -28,7 +28,7 @@ class MarketingExample extends React.Component {
                       <Heading appearance="H2">Wix Unlimited Website Premium Plan</Heading>
                   }
                   description={
-                    <Box direction="vertical" align="left"  >
+                    <Box direction="vertical" align="left" >
                       <Text weight={"normal"}>Get a customizable website, designed to match the colors and style of your logo.</Text>
                       <Text weight={"normal"}>The unlimited plan includes:
                         <ul>

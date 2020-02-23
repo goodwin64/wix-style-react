@@ -18,7 +18,7 @@ class PageExample extends React.Component {
     return (
       <Box>
         <Button onClick={this.openModal}>Open Modal</Button>
-        <Modal isOpen={isModalOpened} onRequestClose={this.closeModal}>
+        <Modal isOpen={isModalOpened} onRequestClose={this.closeModal} shouldCloseOnOverlayClick >
           <Box width="1254px">
             <CustomModal
               title="Title"
@@ -36,8 +36,8 @@ class PageExample extends React.Component {
                       <Row>
                         <Col>
                           <Card>
-                            <Card.Header title="Card 2" />
-                            <Card.Content>Lorem ipsum dolor</Card.Content>
+                            <Card.Header title="Card 1" />
+                            <Card.Content><Text size="medium">Lorem ipsum dolor</Text></Card.Content>
                           </Card>
                         </Col>
                       </Row>
@@ -45,7 +45,7 @@ class PageExample extends React.Component {
                         <Col>
                           <Card>
                             <Card.Header title="Card 2" />
-                            <Card.Content>Lorem ipsum dolor</Card.Content>
+                            <Card.Content><Text size="medium">Lorem ipsum dolor</Text></Card.Content>
                           </Card>
                         </Col>
                       </Row>

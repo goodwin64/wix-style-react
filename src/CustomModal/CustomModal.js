@@ -20,7 +20,7 @@ class CustomModal extends React.PureComponent {
     /** data hook for testing */
     dataHook: PropTypes.string,
     /** The modal's title */
-    title: PropTypes.string,
+    title: PropTypes.node,
     /** The modal's subtitle */
     subtitle: PropTypes.string,
     /** When not provided, the primary action button will not be rendered */
@@ -59,9 +59,13 @@ class CustomModal extends React.PureComponent {
     const { title, subtitle } = this.props;
     return (
       <div className={styles.header}>
-        <Heading dataHook={dataHooks.title} appearance={'H3'}>
-          {title}
-        </Heading>
+        {typeof title === 'string' ? (
+          <Heading dataHook={dataHooks.title} appearance={'H3'}>
+            {title}
+          </Heading>
+        ) : (
+          title
+        )}
         {subtitle && <Text dataHook={dataHooks.subtitle}>{subtitle}</Text>}
       </div>
     );
