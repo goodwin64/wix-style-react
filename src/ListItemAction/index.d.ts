@@ -13,6 +13,7 @@ export type ListItemActionProps = ButtonWithAsProp<{
   ellipsis?: boolean;
   disabled?: boolean;
   tooltipModifiers?: EllipsisHOCProps;
+  highlighted?: boolean;
 }>;
 
 export default class ListItemAction extends React.PureComponent<

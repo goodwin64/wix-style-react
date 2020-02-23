@@ -26,6 +26,7 @@ function ListItemActionWithAllProps() {
       tooltipModifiers={{ fixed: true }}
       as="button"
       onClick={_ev => {}}
+      highlighted
     />
   );
 }

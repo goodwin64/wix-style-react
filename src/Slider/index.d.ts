@@ -16,6 +16,7 @@ export interface SliderProps {
   value?: number[] | number;
   disabled?: boolean;
   marks?: { [key: number]: number | string };
+  startPoint?: number;
 }
 
 export default class Slider extends React.PureComponent<SliderProps> {}
