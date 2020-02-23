@@ -33,7 +33,7 @@ import {CustomModalUniDriver} from '../src/CustomModal/CustomModal.uni.driver';
 import {DataTableUniDriver} from '../src/DataTable/DataTable.uni.driver';
 import {DateInputUniDriver} from '../src/DateInput/DateInput.uni.driver';
 import {DividerUniDriver} from '../src/Divider/Divider.uni.driver';
-import {DropdownUniDriver} from '../src/dropdown/Dropdown.uni.driver';
+import {DropdownUniDriver} from '../src/Dropdown/Dropdown.uni.driver';
 import {DropdownBaseUniDriver} from '../src/DropdownBase/DropdownBase.uni.driver';
 import {DropdownLayoutUniDriver} from '../src/DropdownLayout/DropdownLayout.uni.driver';
 import {EditableRowUniDriver} from '../src/EditableSelector/EditableRow/EditableRow.uni.driver';
