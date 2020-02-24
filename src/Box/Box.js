@@ -155,7 +155,7 @@ Box.propTypes = {
   /** Define styles through a classname */
   className: PropTypes.string,
   /** Defines if the box behaves as an inline element */
-  inline: PropTypes.bool,
+  inline: PropTypes.string,
   /** Defines how the children are ordered (horizontally or vertically) */
   direction: PropTypes.oneOf(Object.keys(directions)),
   /** Defines how the children are aligned according to the X axis */

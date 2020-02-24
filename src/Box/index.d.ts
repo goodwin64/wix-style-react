@@ -2,7 +2,7 @@ import * as React from 'react';
 import {Omit} from '../common';
 
 export interface BoxProps extends Omit<React.CSSProperties, 'direction'> {
-  inline?: boolean;
+  inline?: string;
   className?: string;
   direction?: BoxDirection;
   align?: BoxHorizontalAlignment;
