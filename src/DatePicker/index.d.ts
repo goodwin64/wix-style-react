@@ -2,7 +2,7 @@ import * as React from 'react';
 import {WixComponentProps} from "../BaseComponents/WixComponent";
 import {CalendarProps} from "../Calendar";
 
-export type DatePickerState = 'error' | 'warning' | 'loading';
+export type DatePickerStatus = 'error' | 'warning' | 'loading';
 export interface DatePickerProps extends WixComponentProps, CalendarProps {
   customInput?: React.ReactNode;
   inputProps?: {};
@@ -16,7 +16,7 @@ export interface DatePickerProps extends WixComponentProps, CalendarProps {
   value?: {};
   isOpen?: boolean;
   initialOpen?: boolean;
-  status?: DatePickerState;
+  status?: DatePickerStatus;
   statusMessage?: React.ReactNode;
   width?: number | string;
   zIndex?: number;
