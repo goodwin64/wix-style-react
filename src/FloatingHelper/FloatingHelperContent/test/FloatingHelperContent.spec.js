@@ -40,11 +40,6 @@ describe('FloatingHelperContent', () => {
   });
 
   describe('action button', () => {
-    // const actionProps = {
-    //   actionText: 'Click me !',
-    //   onActionClick: noop
-    // };
-
     it('should not have action button by default', () => {
       const driver = createDriver(<FloatingHelperContentBuilder />);
       expect(driver.hasActionButton()).toBe(false);
@@ -82,38 +77,6 @@ describe('FloatingHelperContent', () => {
       expect(driver.hasActionButton()).toBe(true);
       expect(driver.getActionButtonText()).toBe(actionText);
     });
-
-    // TODO: check for visual test
-    // it('should have button with skin=white and priority=secondary by default', () => {
-    //   const driver = createDriver(
-    //     <FloatingHelperContentBuilder {...actionProps} />
-    //   );
-    //   expect(driver.matchesActionButtonClassName(ButtonSkin.white)).toBe(true);
-    //   expect(
-    //     driver.matchesActionButtonClassName(ButtonPriority.secondary)
-    //   ).toBe(true);
-    // });
-
-    // TODO: check for visual test
-    // it('should have button with skin=white and priority=primary when actionTheme=lightPrimary is selected', () => {
-    //   const driver = createDriver(
-    //     <FloatingHelperContentBuilder {...actionProps} actionTheme={actionButtonTheme.lightPrimary}/>
-    //   );
-    //   expect(driver.matchesActionButtonClassName(ButtonSkin.white)).toBe(true);
-    // });
-
-    // TODO: check for visual test
-    // it('should have button with skin=premium and priority=primary', () => {
-    //   const driver = createDriver(
-    //     <FloatingHelperContentBuilder
-    //       {...actionProps}
-    //       actionTheme={actionButtonTheme.premium}
-    //     />
-    //   );
-    //   expect(driver.matchesActionButtonClassName(ButtonSkin.premium)).toBe(
-    //     true
-    //   );
-    // });
 
     it('should call onClick when action button clicked', () => {
       const spy = jest.fn();

@@ -46,6 +46,10 @@ const tests = [
   },
   {
     describe: 'action theme',
+    its: [{ it: 'default', props: { title, ...action } }],
+  },
+  {
+    describe: 'action theme',
     its: actionThemes.map(theme => ({
       it: `${theme}`,
       props: { title, ...action, actionTheme: theme },
